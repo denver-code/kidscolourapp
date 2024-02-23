@@ -1,3 +1,4 @@
+import 'package:confetti/confetti.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
@@ -97,6 +98,21 @@ class QuizResultView extends GetView<QuizResultController> {
                   ],
                 ),
               ),
+            ),
+            ConfettiWidget(
+              blastDirectionality: BlastDirectionality.explosive,
+              confettiController: controller.confettiController,
+              particleDrag: 0.05,
+              emissionFrequency: 0.05,
+              numberOfParticles: 100,
+              gravity: 0.01,
+              shouldLoop: false,
+              colors: const [
+                Colors.green,
+                Colors.red,
+                Colors.yellow,
+                Colors.blue,
+              ],
             ),
           ],
         ),

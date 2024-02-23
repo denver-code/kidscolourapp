@@ -1,3 +1,4 @@
+import 'package:confetti/confetti.dart';
 import 'package:get/get.dart';
 
 class QuizResultController extends GetxController {
@@ -5,6 +6,10 @@ class QuizResultController extends GetxController {
   RxInt wrongAnswers = 0.obs;
   RxInt correctAnswers = 0.obs;
   RxInt totalQuestions = 0.obs;
+
+  ConfettiController confettiController = ConfettiController(
+    duration: const Duration(seconds: 2),
+  );
 
   @override
   void onInit() {
@@ -14,5 +19,7 @@ class QuizResultController extends GetxController {
     wrongAnswers.value = args[1];
     correctAnswers.value = args[2];
     totalQuestions.value = args[3];
+
+    confettiController.play();
   }
 }

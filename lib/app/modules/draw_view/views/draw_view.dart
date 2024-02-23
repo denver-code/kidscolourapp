@@ -12,9 +12,9 @@ class DrawViewView extends GetView<DrawViewController> {
 
   final DrawingController _drawingController = DrawingController();
 
-  Future<void> _getImageData() async {
-    print((await _drawingController.getImageData())?.buffer.asInt8List());
-  }
+  // Future<void> _getImageData() async {
+  //   print((await _drawingController.getImageData())?.buffer.asInt8List());
+  // }
 
   @override
   Widget build(BuildContext context) {

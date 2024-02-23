@@ -87,7 +87,7 @@ class HomeView extends GetView<HomeController> {
             ),
           ),
           Positioned(
-            top: Get.height / 2,
+            top: Get.height / 2.5,
             left: 0,
             right: 0,
             child: Padding(
@@ -209,6 +209,50 @@ class HomeView extends GetView<HomeController> {
                           children: [
                             Text(
                               'Draw',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 25,
+                                fontFamily: 'Sukhumvit Set',
+                                fontWeight: FontWeight.w700,
+                                height: 0,
+                                letterSpacing: -1.0,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        Get.toNamed("/interactive");
+                      },
+                      child: Container(
+                        width: 282,
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 80, vertical: 20),
+                        decoration: const ShapeDecoration(
+                          color: Color.fromARGB(255, 19, 47, 139),
+                          shape: RoundedRectangleBorder(
+                              side: BorderSide(width: 1)),
+                          shadows: [
+                            BoxShadow(
+                              color: Color(0xFF000000),
+                              blurRadius: 0,
+                              offset: Offset(4, 4),
+                              spreadRadius: 0,
+                            )
+                          ],
+                        ),
+                        child: const Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Text(
+                              'Interactive',
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                 color: Colors.white,

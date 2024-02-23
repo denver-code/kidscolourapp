@@ -4,6 +4,8 @@ import '../modules/draw_view/bindings/draw_view_binding.dart';
 import '../modules/draw_view/views/draw_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
+import '../modules/interactive/bindings/interactive_binding.dart';
+import '../modules/interactive/views/interactive_view.dart';
 import '../modules/learn/bindings/learn_binding.dart';
 import '../modules/learn/views/learn_view.dart';
 import '../modules/quiz/bindings/quiz_binding.dart';
@@ -43,6 +45,11 @@ class AppPages {
       name: _Paths.QUIZ_RESULT,
       page: () => const QuizResultView(),
       binding: QuizResultBinding(),
+    ),
+    GetPage(
+      name: _Paths.INTERACTIVE,
+      page: () => const InteractiveView(),
+      binding: InteractiveBinding(),
     ),
   ];
 }
